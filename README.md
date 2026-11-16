@@ -1,23 +1,25 @@
 # LiteMC · Product website
 
-An English-first, bilingual product introduction for LiteMC. Switch between English and simplified Chinese in the navigation. An explicit language choice is remembered locally; new visitors see English.
+默认英文，可切换简体中文。包含交互式启动器演示、五色主题、滚动渐变叙事、核心功能与细节介绍。公开发布状态保持 Coming soon / 敬请期待。
 
-## Preview
+## 上传与更新
 
-Open `index.html` directly. No build or dependencies are required.
+交付包里的 `index.html` 是完整网页：样式、脚本、图标和五套背景全部内嵌。只需将它覆盖到 GitHub Pages 当前使用的目录（根目录或 docs），并提交推送。保留 `.nojekyll` 即可。
 
-## Publish on GitHub Pages
+无需另外上传 assets、styles.css 或 script.js；网页不会再加载旧版外部脚本和样式。下载压缩包后请先解压，不要把 ZIP 本身作为网页上传。
 
-Upload `index.html`, `styles.css`, `script.js`, `site.config.js`, `.nojekyll`, and `assets/` to your website repository. Keep their relative structure intact.
+## 本地预览
 
-In **Settings → Pages**, choose **Deploy from a branch**, your website branch, and **/(root)**. If the website lives in `docs/`, select **/docs** instead. After setup, push changes to that source to update the same website.
+双击 index.html 即可使用。开发时也可运行 `python preview_server.py`，访问 http://127.0.0.1:4174。预览服务只返回本页，不公开其他项目文件。
 
-## Edit
+## 修改源码
 
-- Text and translations: `script.js` (`copy.en` and `copy.zh`). Keep English fallback content in `index.html` in sync.
-- Layout and appearance: `styles.css`.
-- Optional GitHub link: `site.config.js`. Leave the repository empty to hide it.
+- 页面结构与英文回退内容：site.template.html
+- 两套语言与交互、动画：script.js
+- 样式与响应式布局：styles.css
+- 可选 GitHub 项目链接：site.config.js
+- 现有主题图片和图标：assets/
 
-Public availability is deliberately shown as **Coming soon / 敬请期待**. There are no download links or platform download cards, even when a repository is configured.
+修改后运行 `python build_site.py`，重新生成 index.html。构建仅使用 Python 标准库，无需安装依赖。交付包只包含发布文件；上述开发文件保留在本地工程。
 
-The launcher preview is an interactive concept, not a running app. It supports navigation and five theme colors. Content is based on the LiteMC v20 delivery notes; backgrounds come from the existing launcher assets. No third-party scripts, fonts, analytics, or remote dependencies are used.
+页面中的产品窗口是交互式概念演示，不在浏览器中实际启动或安装游戏。滚动动画尊重系统“减少动态效果”设置；没有 JavaScript 时，英文内容仍然可阅读。产品功能依据 LiteMC v20 交付资料，素材沿用现有启动器背景。
