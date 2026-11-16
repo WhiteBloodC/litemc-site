@@ -102,7 +102,7 @@ html{scroll-padding-top:var(--nav-height)}.wrap{width:min(1080px,calc(100% - 80p
       <div class="story-sticky"><div class="story-landscape"></div><div class="story-vignette"></div>
         <div class="story-content wrap">
           <div class="story-chapter" data-chapter="0"><p class="kicker" data-i18n="storyKicker1">01 / CLEAN INTERFACE</p><h2 data-i18n="storyTitle1">Launch without the clutter.</h2><p data-i18n="storyCopy1">A clear home screen. Your game, one click away.</p></div>
-          <div class="story-chapter" data-chapter="1"><p class="kicker" data-i18n="storyKicker2">02 / VERSIONS &amp; LOADERS</p><h2 data-i18n="storyTitle2">Choose your version.</h2><p data-i18n="storyCopy2">Install vanilla Minecraft or a mod loader. Keep each instance separate.</p></div>
+          <div class="story-chapter" data-chapter="1"><p class="kicker" data-i18n="storyKicker2">02 / BEGINNER FRIENDLY</p><h2 data-i18n="storyTitle2">Easy from the first launch.</h2><p data-i18n="storyCopy2">Made for beginners, with clear controls and straightforward setup.</p></div>
           <div class="story-chapter" data-chapter="2"><p class="kicker" data-i18n="storyKicker3">03 / MODS &amp; SHADERS</p><h2 data-i18n="storyTitle3">Download mods and shaders.</h2><p data-i18n="storyCopy3">Search and download in the launcher. Check mod dependencies and find shaders for compatible instances.</p></div>
         </div><div class="story-controls wrap"><span class="story-scroll-hint"><span class="scroll-mouse" aria-hidden="true"></span><span data-i18n="scrollHint">Scroll to next chapter</span></span><div class="story-pagination" role="group" aria-label="Explore the chapters" data-i18n-aria="chaptersLabel"><button type="button" id="chapter-previous" class="chapter-arrow" aria-label="Previous" data-i18n-aria="previousChapter"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button><button type="button" data-story-step="0" aria-label="Chapter 1" aria-pressed="true"><span>01</span><i></i></button><button type="button" data-story-step="1" aria-label="Chapter 2" aria-pressed="false"><span>02</span><i></i></button><button type="button" data-story-step="2" aria-label="Chapter 3" aria-pressed="false"><span>03</span><i></i></button><button type="button" id="chapter-next" class="chapter-arrow" aria-label="Next" data-i18n-aria="nextChapter"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button></div><span class="story-count" aria-hidden="true"><span id="story-current">01</span><span> / 03</span></span></div>
       </div>
@@ -125,7 +125,7 @@ html{scroll-padding-top:var(--nav-height)}.wrap{width:min(1080px,calc(100% - 80p
         <article><span class="detail-icon" aria-hidden="true">⇣</span><h3 data-i18n="detailSourcesTitle">Choose a download source.</h3><p data-i18n="detailSourcesCopy">Choose official or BMCLAPI game downloads, with Modrinth and MCIM for mods.</p></article>
         <article><span class="detail-icon" aria-hidden="true">◎</span><h3 data-i18n="detailAccountsTitle">Multiple accounts.</h3><p data-i18n="detailAccountsCopy">Switch between Microsoft accounts and an offline nickname for local play.</p></article>
         <article><span class="detail-icon" aria-hidden="true">✧</span><h3 data-i18n="detailSkinsTitle">Custom skins.</h3><p data-i18n="detailSkinsCopy">Choose a local PNG skin. Compatible CustomSkinLoader support brings it into offline play.</p></article>
-        <article><span class="detail-icon" aria-hidden="true">✓</span><h3 data-i18n="detailSaveTitle">Automatic saving.</h3><p data-i18n="detailSaveCopy">Appearance and preferences save automatically. One less thing to think about.</p></article>
+        <article><span class="detail-icon" aria-hidden="true">▣</span><h3 data-i18n="detailPackageTitle">One file. Easy to run.</h3><p data-i18n="detailPackageCopy">Windows ships as one EXE. Extract and open, with Java and WebView2 ready. No Python install needed.</p></article>
       </div>
     </section>
     <section class="platform-section wrap"><div class="platform-copy"><p class="kicker" data-i18n="platformKicker">DESKTOP SUPPORT</p><h2 data-i18n="platformTitle">Windows and macOS.</h2><p data-i18n="platformCopy">A focused desktop experience, with Windows support and macOS Universal2 builds.</p></div><div class="platform-visual" aria-hidden="true"><div><span>⊞</span><b>Windows</b></div><div><span>⌘</span><b>macOS</b></div></div></section>
@@ -201,7 +201,7 @@ Object.assign(copy.en, {
   gameFolder: 'Game directory', gameFolderValue: 'Your chosen location', javaLabel: 'Java runtime', javaValue: 'Choose your Java', isolation: 'Instance isolation', enabled: 'Enabled', downloadSource: 'Download source', sourceValue: 'Official / BMCLAPI',
   modBrowse: 'Browse mods', dependencies: 'Explore dependencies', manage: 'Manage installed content', shaderBrowse: 'Browse shaders', compatible: 'Compatible instances', enableInGame: 'Enable in Minecraft',
   storyLabel: 'Space to explore', storyKicker1: '01 / CLEAN INTERFACE', storyTitle1: 'Launch without the clutter.', storyCopy1: 'A clear home screen. Your game, one click away.',
-  storyKicker2: '02 / VERSIONS & LOADERS', storyTitle2: 'Choose your version.', storyCopy2: 'Install vanilla Minecraft or a mod loader. Keep each instance separate.',
+  storyKicker2: '02 / BEGINNER FRIENDLY', storyTitle2: 'Easy from the first launch.', storyCopy2: 'Made for beginners, with clear controls and straightforward setup.',
   storyKicker3: '03 / MODS & SHADERS', storyTitle3: 'Download mods and shaders.', storyCopy3: 'Search and download in the launcher. Check mod dependencies and find shaders for compatible instances.',
   detailsKicker: "MORE BUILT IN.", detailsLine1: 'Less setup.', detailsLine2: 'More control.',
   detailFoldersTitle: 'Choose your folders.', detailFoldersCopy: 'Choose where games and downloads live. Keep your setup on your terms.',
@@ -209,7 +209,7 @@ Object.assign(copy.en, {
   detailSourcesTitle: 'Choose a download source.', detailSourcesCopy: 'Choose official or BMCLAPI game downloads, with Modrinth and MCIM for mods.',
   detailAccountsTitle: 'Multiple accounts.', detailAccountsCopy: 'Switch between Microsoft accounts and an offline nickname for local play.',
   detailSkinsTitle: 'Custom skins.', detailSkinsCopy: 'Choose a local PNG skin. Compatible CustomSkinLoader support brings it into offline play.',
-  detailSaveTitle: 'Automatic saving.', detailSaveCopy: 'Appearance and preferences save automatically. One less thing to think about.',
+  detailPackageTitle: 'One file. Easy to run.', detailPackageCopy: 'Windows ships as one EXE. Extract and open, with Java and WebView2 ready. No Python install needed.',
   platformKicker: 'DESKTOP SUPPORT', platformTitle: 'Windows and macOS.', platformCopy: 'A focused desktop experience, with Windows support and macOS Universal2 builds.',
 });
 Object.assign(copy.zh, {
@@ -218,7 +218,7 @@ Object.assign(copy.zh, {
   gameFolder: '游戏目录', gameFolderValue: '你指定的位置', javaLabel: 'Java 运行环境', javaValue: '选择你的 Java', isolation: '版本隔离', enabled: '已开启', downloadSource: '下载源', sourceValue: '官方 / BMCLAPI',
   modBrowse: '浏览模组', dependencies: '查看前置依赖', manage: '管理已安装内容', shaderBrowse: '浏览光影', compatible: '兼容的实例', enableInGame: '在 Minecraft 内启用',
   storyLabel: '为探索，留出空间', storyKicker1: '01 / 简洁界面', storyTitle1: '界面简洁，直接出发。', storyCopy1: '清晰的主页，选好版本，一键进入游戏。',
-  storyKicker2: '02 / 版本与加载器', storyTitle2: '原版或加载器，随你选择。', storyCopy2: '安装原版 Minecraft 或模组加载器，不同实例各自独立。',
+  storyKicker2: '02 / 新手友好', storyTitle2: '新手，也能轻松上手。', storyCopy2: '清晰的操作，简单的设置，不用先研究复杂知识。',
   storyKicker3: '03 / 模组与光影', storyTitle3: '模组与光影，直接下载。', storyCopy3: '在启动器内搜索与下载，查看模组依赖，为兼容实例挑选光影。',
   detailsKicker: '更多内置功能。', detailsLine1: '设置更简单，', detailsLine2: '管理更自由。',
   detailFoldersTitle: '自定义目录。', detailFoldersCopy: '自由指定游戏和下载目录，让文件安放在你习惯的地方。',
@@ -226,7 +226,7 @@ Object.assign(copy.zh, {
   detailSourcesTitle: '可选下载源。', detailSourcesCopy: '游戏支持官方与 BMCLAPI 下载源，模组支持 Modrinth 与 MCIM。',
   detailAccountsTitle: '多账号管理。', detailAccountsCopy: '切换微软账号，或用离线昵称开启本地探索。',
   detailSkinsTitle: '自定义皮肤。', detailSkinsCopy: '选择本地 PNG 皮肤。离线使用需要兼容的 CustomSkinLoader 支持。',
-  detailSaveTitle: '自动保存设置。', detailSaveCopy: '外观与偏好自动保存，少一步操作，多一份轻松。',
+  detailPackageTitle: '单文件，轻松运行。', detailPackageCopy: 'Windows 版解压后打开单个 EXE，无需安装 Python。运行需要 Java 与 WebView2。',
   platformKicker: '桌面平台支持。', platformTitle: 'Windows 与 macOS。', platformCopy: '专注的桌面体验，支持 Windows，并提供 macOS Universal2 构建。',
 });
 
