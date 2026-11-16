@@ -1,30 +1,74 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a0e13">
-  <meta name="description" content="LiteMC is an independently developed Minecraft: Java Edition launcher currently in development.">
-  <title>LiteMC — Minecraft Java Edition Launcher</title>
-  <style>
-    :root{color-scheme:dark;--bg:#0a0e13;--panel:#111820;--line:#27313c;--text:#eaf0f6;--muted:#9daab8;--accent:#8de0bd}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 75% 35% at 50% 4%,#18382f 0%,transparent 80%),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    a{color:inherit}a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}.wrap{max-width:1070px;margin:auto;padding:0 28px}
-    header{border-bottom:1px solid #ffffff12}.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:22px;font-weight:800;letter-spacing:-.6px;text-decoration:none}.brand span{color:var(--accent)}nav{display:flex;gap:25px;flex-wrap:wrap}nav a{color:var(--muted);font-size:14px;text-decoration:none}nav a:hover{color:var(--text)}
-    .hero{padding:105px 0 92px;max-width:800px}.pill{display:inline-block;border:1px solid #4e806d;background:#18332b;color:#b7edd5;padding:5px 13px;border-radius:50px;font-size:13px;font-weight:600}.hero h1{font-size:clamp(47px,8vw,87px);line-height:1.08;letter-spacing:-4px;margin:23px 0}.hero h1 em{font-style:normal;color:var(--accent)}.lead{font-size:20px;color:#b9c6d1;max-width:650px}.cta{display:inline-block;margin-top:19px;padding:12px 21px;border:1px solid #547b6d;background:#172b25;border-radius:10px;text-decoration:none;font-weight:650}.cta:hover{background:#224235}
-    section{padding:42px 0 62px}h2{font-size:31px;letter-spacing:-.9px;margin:0 0 17px}section>p,.sectionintro{color:var(--muted);max-width:760px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:30px}.card{padding:26px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(140deg,#151f28,#10161c)}.symbol{color:var(--accent);font-size:25px}.card h3{font-size:18px;margin:12px 0}.card p{margin:0;color:var(--muted);font-size:15px}.info{border:1px solid var(--line);border-radius:17px;background:var(--panel);padding:28px;margin-top:25px}.info p{color:var(--muted)}.info p:last-child{margin-bottom:0}.label{color:var(--accent);font-weight:700;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}footer{border-top:1px solid var(--line);padding:38px 0 48px;color:var(--muted);font-size:13px}footer p{max-width:830px}strong{color:var(--text)}
-    @media(max-width:690px){.nav{align-items:flex-start;flex-direction:column;justify-content:center;padding:18px 0}.hero{padding:73px 0 55px}.hero h1{letter-spacing:-2px}.cards{grid-template-columns:1fr}section{padding:32px 0 48px}nav{gap:16px}}
-  </style>
+  <meta name="theme-color" content="#f7f8f5">
+  <meta name="description" content="LiteMC，一款轻盈、简洁的 Minecraft Java 桌面启动器。管理版本、模组、光影和账号，让每一次出发都更简单。">
+  <title>LiteMC — 轻一点，玩尽想象。</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.config.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="#top">Lite<span>MC</span></a><nav aria-label="Main navigation"><a href="#about">About</a><a href="#authentication">Authentication</a><a href="#privacy">Privacy</a><a href="#status">Status</a></nav></div></header>
-<main id="top" class="wrap">
-  <div class="hero"><span class="pill">Independent project · In development</span><h1>Minecraft.<br><em>Simply launched.</em></h1><p class="lead">Meet LiteMC, an independently developed desktop launcher for Minecraft: Java Edition, focused on a straightforward launch experience and Microsoft account authentication.</p><a class="cta" href="#about">Explore LiteMC ↓</a></div>
-  <section id="about"><span class="label">Overview</span><h2>About LiteMC</h2><p class="sectionintro">LiteMC is a third-party Minecraft: Java Edition launcher project. The software is privately developed and is not open source at this time. This website provides basic project information and explains the intended official account sign-in flow.</p><div class="cards"><div class="card"><div class="symbol">◇</div><h3>Java Edition</h3><p>Designed for launching Minecraft: Java Edition on desktop systems.</p></div><div class="card"><div class="symbol">↗</div><h3>Microsoft sign-in</h3><p>Designed to authenticate legitimate accounts through Microsoft's sign-in services.</p></div><div class="card"><div class="symbol">⌘</div><h3>Independent development</h3><p>Built as an independent project, with source code maintained in a private repository.</p></div></div></section>
-  <section id="authentication"><span class="label">Account access</span><h2>Microsoft account authentication</h2><p class="sectionintro">LiteMC is being developed to support official Microsoft OAuth sign-in for users who own Minecraft: Java Edition. The intended authentication flow uses Microsoft identity services and the Xbox Live / Minecraft Services APIs to establish a valid game session.</p><div class="info"><strong>Minecraft API access status</strong><p>The project's own Microsoft Entra application is undergoing the Minecraft application ID approval process. This website does not represent that approval has already been granted.</p></div></section>
-  <section id="privacy"><span class="label">Privacy</span><h2>Authentication & privacy</h2><p class="sectionintro">Microsoft sign-in should take place through Microsoft's official authentication interface; users should not enter their Microsoft passwords into a LiteMC password form. The authentication implementation is under development. A complete privacy policy covering token storage, retention, and any diagnostics will be provided before public distribution.</p></section>
-  <section id="status"><span class="label">Project information</span><h2>Development status</h2><div class="info"><p><strong>Name:</strong> LiteMC</p><p><strong>Category:</strong> Third-party Minecraft: Java Edition desktop launcher</p><p><strong>Status:</strong> Under private development</p><p><strong>Source code:</strong> Private; not publicly distributed through this website</p><p><strong>Distribution:</strong> No public download is offered on this page</p></div></section>
-</main>
-<footer><div class="wrap"><strong>LiteMC</strong><p>NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</p><p>Minecraft and related trademarks belong to their respective owners. This site is for project information only.</p></div></footer>
+  <a class="skip-link" href="#main">跳转到内容</a>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="主导航">
+      <a href="#" class="brand"><img src="assets/mark.svg" width="25" height="28" alt=""><span>LiteMC</span></a>
+      <div class="nav-links"><a href="#features">功能</a><a href="#appearance">外观</a><a href="#start">开始使用</a><a class="repo-link" href="#repository">GitHub <span aria-hidden="true">↗</span></a></div>
+      <a href="#download" class="nav-download">获取 LiteMC <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap">
+      <div class="eyebrow"><span class="live-dot"></span> Minecraft Java 启动器 <span class="tag">v20.0</span></div>
+      <h1>轻一点，<br><span>玩尽想象。</span></h1>
+      <p class="hero-description">从第一次启动，到下一个世界。<br>让版本、模组与光影井然有序，把更多时间留给探索。</p>
+      <div class="hero-actions"><a class="button primary" href="#download">获取 LiteMC <span aria-hidden="true">↓</span></a><a class="text-link" href="#features">探索更多 <span aria-hidden="true">↗</span></a></div>
+      <p class="platform-note">Windows · macOS 构建支持</p>
+
+      <div class="showcase" aria-label="LiteMC 启动界面设计演示">
+        <div class="ambient"></div>
+        <div class="app-demo" data-theme="green">
+          <div class="app-titlebar"><span><img src="assets/mark.svg" width="15" height="18" alt=""> LiteMC</span><div aria-hidden="true">− <i></i> ×</div></div>
+          <div class="app-workspace">
+            <aside class="app-sidebar" aria-label="界面演示导航">
+              <div class="demo-nav"><button class="demo-tab active" data-view="launch"><span>▷</span>启动</button><button class="demo-tab" data-view="download"><span>↓</span>下载</button><button class="demo-tab" data-view="mods"><span>♧</span>模组</button><button class="demo-tab" data-view="shaders"><span>◇</span>光影</button><button class="demo-tab" data-view="settings"><span>☷</span>设置</button></div>
+              <div class="demo-account"><span>☺</span><small>Player</small></div>
+            </aside>
+            <div class="demo-content">
+              <div id="demo-panel" class="demo-panel" hidden></div>
+              <div class="demo-dock"><div class="demo-version"><span class="live-dot"></span>一切就绪，随时出发。</div><button class="demo-launch" id="demo-launch"><span>▷ &nbsp;启动游戏</span><small>Minecraft Java</small></button></div>
+              <div class="demo-toast" id="demo-toast" role="status" hidden>这是网页界面演示。下载 LiteMC 后，即可开启你的世界。</div>
+            </div>
+          </div>
+        </div>
+        <div class="showcase-caption"><span>为你的下一个世界，准备就绪。</span><span>交互式界面演示 · 非运行截图</span></div>
+      </div>
+    </section>
+
+    <div class="compatibility wrap"><span>熟悉的世界，更多种打开方式。</span><div><span>Vanilla</span><span>Fabric</span><span>Forge</span><span>NeoForge</span><span>OptiFine</span></div></div>
+
+    <section class="section wrap" id="features">
+      <div class="section-heading"><p class="kicker">LESS FRICTION. MORE PLAY.</p><h2>复杂的准备，<br><span>简单地完成。</span></h2><p>从原版到模组世界，你需要的工具，都在手边。</p></div>
+      <div class="feature-grid">
+        <article class="feature-card versions"><div class="card-copy"><span class="feature-icon">⌘</span><h3>每个世界，各有空间。</h3><p>原版、Fabric、Forge、NeoForge 与 OptiFine。<br>安装和管理不同版本，默认开启版本隔离。</p></div><div class="version-stack" aria-hidden="true"><div><span class="mini-block"></span><span><b>Minecraft Java</b><small>原版 · 简单出发</small></span><span class="row-pill">已下载</span></div><div><span class="mini-block fabric"></span><span><b>Fabric</b><small>轻装上阵，自由组合</small></span><span class="row-pill">已下载</span></div><div><span class="mini-block forge"></span><span><b>NeoForge</b><small>探索模组的更多可能</small></span><span class="row-pill">已下载</span></div></div></article>
+        <article class="feature-card mods"><div class="card-copy"><span class="feature-icon">✳</span><h3>把喜欢，装进世界。</h3><p>搜索模组、查看简介与前置依赖。<br>为兼容实例挑选光影，让熟悉的方块焕然一新。</p></div><div class="mod-art" aria-hidden="true"><span class="mod-tile">✳</span><span class="mod-tile">◈</span><span class="mod-tile">☀</span><div class="mod-label">模组 & 光影 <span>为探索，添点不同。</span></div></div></article>
+        <article class="feature-card multitask"><div class="card-copy"><span class="feature-icon">↗</span><p class="small-label">v20 的从容体验</p><h3>世界在运行。<br>灵感不必等。</h3><p>游戏运行时，依然可以下载版本、管理模组与光影。<br>下载和游戏各自独立，新增模组在下次启动时加载。</p></div><div class="task-art"><div class="task-row"><span class="task-status"><span class="live-dot"></span> Minecraft 运行中</span><span class="task-badge">尽情探索</span></div><div class="task-download"><span>为下一个世界做好准备</span><span>68%</span><div class="task-progress"><i></i></div><small>下载进度示意</small></div></div></article>
+        <article class="feature-card account"><div class="card-copy"><span class="feature-icon">◎</span><h3>你的身份。你的玩法。</h3><p>离线昵称与微软正版多账号，按需切换。<br>自定义目录和 Java 设置，保留自己的习惯。</p></div><div class="account-art" aria-hidden="true"><div class="avatar-art">L</div><b>Hello, Player.</b><span>下一个冒险，属于你。</span><div><span>离线昵称</span><span>微软账号</span></div></div></article>
+      </div>
+    </section>
+
+    <section class="appearance-section" id="appearance"><div class="wrap appearance-layout"><div class="appearance-copy"><p class="kicker">MAKE IT YOURS.</p><h2>好看，<br>也合你心意。</h2><p>五种柔和配色，搭配各自的世界风景。<br>磨砂、通透、恰到好处。<br>选一个颜色，让每次打开都有好心情。</p><div class="theme-picker" role="group" aria-label="切换演示主题"><button data-theme="white" aria-label="白色" aria-pressed="false" style="--swatch:#e6e9e6"></button><button data-theme="green" aria-label="浅绿" aria-pressed="true" style="--swatch:#9bb69a"></button><button data-theme="pink" aria-label="粉色" aria-pressed="false" style="--swatch:#dfb5c5"></button><button data-theme="blue" aria-label="浅蓝" aria-pressed="false" style="--swatch:#a9ccdf"></button><button data-theme="yellow" aria-label="浅黄" aria-pressed="false" style="--swatch:#e3d39c"></button></div><p class="theme-name" id="theme-name" role="status">浅绿 · 像清晨一样清新</p></div><div class="theme-preview" data-theme="green"><div class="theme-glass"><img src="assets/mark.svg" alt="" width="38" height="42"><span>让热爱，自然发生。</span><small>LiteMC · 你的方块世界入口</small></div><span class="theme-preview-label">主题效果演示</span></div></div></section>
+
+    <section class="section wrap getting-started" id="start"><div class="section-heading"><p class="kicker">A LITTLE SETUP. A BIG WORLD.</p><h2>三步，走进你的世界。</h2><p>准备好合适的 Java，剩下的交给你的好奇心。</p></div><div class="steps"><article><span class="step-number">01</span><h3>准备启动器</h3><p>获取适合系统的版本，准备 Java 运行环境，并指定游戏下载目录。</p></article><article><span class="step-number">02</span><h3>选择你的玩法</h3><p>添加账号，安装原版或模组加载器。按需搭配模组、光影与皮肤。</p></article><article><span class="step-number">03</span><h3>点击启动，出发</h3><p>选择已安装版本，进入游戏。建造、探索，或者只是看一场方块日落。</p></article></div></section>
+
+    <section class="download-section wrap" id="download"><p class="kicker">YOUR NEXT ADVENTURE STARTS HERE.</p><h2>下一个世界，<br><span>现在开始。</span></h2><p>LiteMC v20.0 · 为 Minecraft Java 而来。</p><div class="download-options"><article><span class="os-icon" aria-hidden="true">⊞</span><h3>Windows</h3><p>Windows 10 / 11 · x64</p><a class="button primary release-link" data-platform="windows" href="#repository">查看发布状态 <span aria-hidden="true">↗</span></a><small>解压运行 · 需 Java 和 WebView2</small></article><article><span class="os-icon mac-icon" aria-hidden="true">⌘</span><h3>macOS</h3><p>macOS 15+ · Apple Silicon / Intel</p><a class="button secondary release-link" data-platform="macos" href="#repository">查看构建说明 <span aria-hidden="true">↗</span></a><small>Universal2 构建支持 · 以发布产物为准</small></article></div><div class="repository-note" id="repository"><span class="live-dot"></span><p id="repository-status">GitHub 仓库与下载链接准备中。发布后将在这里开放获取。</p></div></section>
+
+    <section class="faq wrap"><h2>出发前，你可能想知道。</h2><details><summary>需要准备什么运行环境？<span>+</span></summary><p>Windows 版本需要 Windows 10 / 11 x64、WebView2 Runtime，以及匹配游戏版本的 64 位 Java；无需安装 Python。macOS 构建以 macOS 15 及以上为目标，同时支持 Apple Silicon 和 Intel。游戏的 Java 版本与架构仍需匹配。</p></details><details><summary>可以使用微软账号和离线昵称吗？<span>+</span></summary><p>支持离线昵称及微软正版多账号。微软账号通过系统浏览器授权，启动游戏时验证 Minecraft Java 授权。离线昵称适合本地游玩，不提供游戏许可、Realms 或正版服务器认证。</p></details><details><summary>模组、光影和自定义皮肤有什么要求？<span>+</span></summary><p>模组需匹配游戏版本与加载器。光影仅对具备相应加载能力的实例提供，需要在游戏内启用。离线自定义皮肤依赖兼容的 CustomSkinLoader；本地皮肤不会上传到微软账号，也不保证其他玩家可见。</p></details><details><summary>游戏运行时，还能继续使用启动器吗？<span>+</span></summary><p>可以。v20 将游戏与下载任务分开管理，运行时仍可下载和管理模组、光影。新增模组在下次游戏启动后加载。取消下载不会关闭游戏；关闭启动器也会保留已启动的游戏。</p></details></section>
+  </main>
+  <footer class="site-footer wrap"><div><a href="#" class="brand"><img src="assets/mark.svg" width="22" height="25" alt="">LiteMC</a><span>轻一点，玩尽想象。</span><a class="repo-link" href="#repository">在 GitHub 上了解更多 ↗</a></div><p>独立第三方启动器，与 Mojang、Microsoft 或 Apple 无隶属关系。Minecraft 为其各自权利人的商标。</p><p>页面界面与进度为展示示意。功能依据 LiteMC v20 交付资料；macOS 构建、签名及实际兼容性以发布说明为准。</p></footer>
 </body>
 </html>
