@@ -1,74 +1,70 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f8f5">
-  <meta name="description" content="LiteMC，一款轻盈、简洁的 Minecraft Java 桌面启动器。管理版本、模组、光影和账号，让每一次出发都更简单。">
-  <title>LiteMC — 轻一点，玩尽想象。</title>
+  <meta name="description" content="A little lighter. A world of possibility. Meet LiteMC, a thoughtfully simple Minecraft Java launcher.">
+  <title>LiteMC — A little lighter. A world of possibility.</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="site.config.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">跳转到内容</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
   <header class="site-header">
-    <nav class="nav wrap" aria-label="主导航">
-      <a href="#" class="brand"><img src="assets/mark.svg" width="25" height="28" alt=""><span>LiteMC</span></a>
-      <div class="nav-links"><a href="#features">功能</a><a href="#appearance">外观</a><a href="#start">开始使用</a><a class="repo-link" href="#repository">GitHub <span aria-hidden="true">↗</span></a></div>
-      <a href="#download" class="nav-download">获取 LiteMC <span aria-hidden="true">↗</span></a>
+    <nav class="nav wrap" aria-label="Main navigation" data-i18n-aria="navigation">
+      <a href="#" class="brand" aria-label="LiteMC home"><img src="assets/mark.svg" width="25" height="28" alt=""><span>LiteMC</span></a>
+      <div class="nav-links"><a href="#features" data-i18n="navFeatures">Overview</a><a href="#appearance" data-i18n="navAppearance">Design</a></div>
+      <div class="nav-actions"><button class="language-toggle" id="language-toggle" type="button" aria-label="Switch to Chinese"><span aria-hidden="true">◎</span><span id="language-label" lang="zh-CN">中文</span></button><a href="#coming-soon" class="nav-soon"><span class="live-dot"></span><span data-i18n="comingSoon">Coming soon</span></a></div>
     </nav>
   </header>
-
   <main id="main">
     <section class="hero wrap">
-      <div class="eyebrow"><span class="live-dot"></span> Minecraft Java 启动器 <span class="tag">v20.0</span></div>
-      <h1>轻一点，<br><span>玩尽想象。</span></h1>
-      <p class="hero-description">从第一次启动，到下一个世界。<br>让版本、模组与光影井然有序，把更多时间留给探索。</p>
-      <div class="hero-actions"><a class="button primary" href="#download">获取 LiteMC <span aria-hidden="true">↓</span></a><a class="text-link" href="#features">探索更多 <span aria-hidden="true">↗</span></a></div>
-      <p class="platform-note">Windows · macOS 构建支持</p>
-
-      <div class="showcase" aria-label="LiteMC 启动界面设计演示">
+      <p class="eyebrow"><span class="live-dot"></span><span data-i18n="eyebrow">A fresh way into Minecraft Java.</span></p>
+      <h1><span data-i18n="heroLine1">A little lighter.</span><br><span class="muted-heading" data-i18n="heroLine2">A world of possibility.</span></h1>
+      <p class="hero-description" data-i18n="heroDescription">Your versions, mods, and shaders. Beautifully together.</p>
+      <a class="text-link" href="#features"><span data-i18n="explore">Meet LiteMC</span><span aria-hidden="true">↘</span></a>
+      <div class="showcase" aria-label="Interactive launcher concept" data-i18n-aria="showcaseLabel">
         <div class="ambient"></div>
         <div class="app-demo" data-theme="green">
-          <div class="app-titlebar"><span><img src="assets/mark.svg" width="15" height="18" alt=""> LiteMC</span><div aria-hidden="true">− <i></i> ×</div></div>
+          <div class="app-titlebar"><span><img src="assets/mark.svg" width="15" height="18" alt=""> LiteMC</span><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div></div>
           <div class="app-workspace">
-            <aside class="app-sidebar" aria-label="界面演示导航">
-              <div class="demo-nav"><button class="demo-tab active" data-view="launch"><span>▷</span>启动</button><button class="demo-tab" data-view="download"><span>↓</span>下载</button><button class="demo-tab" data-view="mods"><span>♧</span>模组</button><button class="demo-tab" data-view="shaders"><span>◇</span>光影</button><button class="demo-tab" data-view="settings"><span>☷</span>设置</button></div>
-              <div class="demo-account"><span>☺</span><small>Player</small></div>
+            <aside class="app-sidebar" aria-label="Preview navigation" data-i18n-aria="demoNavigation">
+              <div class="demo-nav">
+                <button class="demo-tab active" data-view="launch" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 12 8-12 8Z"/></svg><span data-i18n="play">Play</span></button>
+                <button class="demo-tab" data-view="download" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg><span data-i18n="versions">Versions</span></button>
+                <button class="demo-tab" data-view="mods" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6V3a2 2 0 0 1 4 0v2h6v6h-2a2 2 0 0 0 0 4h2v6H4v-6h2a2 2 0 0 0 0-4H4Z"/></svg><span data-i18n="mods">Mods</span></button>
+                <button class="demo-tab" data-view="shaders" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5v9l-9 5-9-5V8Zm0 10v9M3 8l9 5 9-5M12 3v10"/></svg><span data-i18n="shaders">Shaders</span></button>
+                <button class="demo-tab" data-view="settings" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18M8 3v6m8 0v6M8 15v6"/></svg><span data-i18n="settings">Settings</span></button>
+              </div>
+              <div class="demo-account"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 22v-3a7 7 0 0 1 14 0v3"/></svg><small>Player</small></div>
             </aside>
             <div class="demo-content">
               <div id="demo-panel" class="demo-panel" hidden></div>
-              <div class="demo-dock"><div class="demo-version"><span class="live-dot"></span>一切就绪，随时出发。</div><button class="demo-launch" id="demo-launch"><span>▷ &nbsp;启动游戏</span><small>Minecraft Java</small></button></div>
-              <div class="demo-toast" id="demo-toast" role="status" hidden>这是网页界面演示。下载 LiteMC 后，即可开启你的世界。</div>
+              <div class="demo-dock"><div class="demo-version"><span class="live-dot"></span><span data-i18n="ready">A new world awaits.</span></div><button class="demo-launch" id="demo-launch"><span><span aria-hidden="true">▷</span> <span data-i18n="launch">Let's play</span></span><small>Minecraft Java</small></button></div>
+              <div class="demo-toast" id="demo-toast" role="status" hidden data-i18n="toast">Your next adventure. Coming soon.</div>
             </div>
           </div>
         </div>
-        <div class="showcase-caption"><span>为你的下一个世界，准备就绪。</span><span>交互式界面演示 · 非运行截图</span></div>
+        <div class="showcase-caption"><span data-i18n="caption">Less in the way. More in your world.</span><span data-i18n="concept">Interactive concept</span></div>
       </div>
     </section>
-
-    <div class="compatibility wrap"><span>熟悉的世界，更多种打开方式。</span><div><span>Vanilla</span><span>Fabric</span><span>Forge</span><span>NeoForge</span><span>OptiFine</span></div></div>
-
+    <div class="compatibility wrap"><p data-i18n="compatibility">One launcher. So many ways to play.</p><div><span>Vanilla</span><span>Fabric</span><span>Forge</span><span>NeoForge</span><span>OptiFine</span></div></div>
     <section class="section wrap" id="features">
-      <div class="section-heading"><p class="kicker">LESS FRICTION. MORE PLAY.</p><h2>复杂的准备，<br><span>简单地完成。</span></h2><p>从原版到模组世界，你需要的工具，都在手边。</p></div>
+      <div class="section-heading"><p class="kicker" data-i18n="featuresKicker">THOUGHTFULLY SIMPLE.</p><h2><span data-i18n="featuresLine1">Everything you need.</span><br><span class="muted-heading" data-i18n="featuresLine2">Room for what you love.</span></h2></div>
       <div class="feature-grid">
-        <article class="feature-card versions"><div class="card-copy"><span class="feature-icon">⌘</span><h3>每个世界，各有空间。</h3><p>原版、Fabric、Forge、NeoForge 与 OptiFine。<br>安装和管理不同版本，默认开启版本隔离。</p></div><div class="version-stack" aria-hidden="true"><div><span class="mini-block"></span><span><b>Minecraft Java</b><small>原版 · 简单出发</small></span><span class="row-pill">已下载</span></div><div><span class="mini-block fabric"></span><span><b>Fabric</b><small>轻装上阵，自由组合</small></span><span class="row-pill">已下载</span></div><div><span class="mini-block forge"></span><span><b>NeoForge</b><small>探索模组的更多可能</small></span><span class="row-pill">已下载</span></div></div></article>
-        <article class="feature-card mods"><div class="card-copy"><span class="feature-icon">✳</span><h3>把喜欢，装进世界。</h3><p>搜索模组、查看简介与前置依赖。<br>为兼容实例挑选光影，让熟悉的方块焕然一新。</p></div><div class="mod-art" aria-hidden="true"><span class="mod-tile">✳</span><span class="mod-tile">◈</span><span class="mod-tile">☀</span><div class="mod-label">模组 & 光影 <span>为探索，添点不同。</span></div></div></article>
-        <article class="feature-card multitask"><div class="card-copy"><span class="feature-icon">↗</span><p class="small-label">v20 的从容体验</p><h3>世界在运行。<br>灵感不必等。</h3><p>游戏运行时，依然可以下载版本、管理模组与光影。<br>下载和游戏各自独立，新增模组在下次启动时加载。</p></div><div class="task-art"><div class="task-row"><span class="task-status"><span class="live-dot"></span> Minecraft 运行中</span><span class="task-badge">尽情探索</span></div><div class="task-download"><span>为下一个世界做好准备</span><span>68%</span><div class="task-progress"><i></i></div><small>下载进度示意</small></div></div></article>
-        <article class="feature-card account"><div class="card-copy"><span class="feature-icon">◎</span><h3>你的身份。你的玩法。</h3><p>离线昵称与微软正版多账号，按需切换。<br>自定义目录和 Java 设置，保留自己的习惯。</p></div><div class="account-art" aria-hidden="true"><div class="avatar-art">L</div><b>Hello, Player.</b><span>下一个冒险，属于你。</span><div><span>离线昵称</span><span>微软账号</span></div></div></article>
+        <article class="feature-card versions-card"><div class="card-copy"><span class="feature-index">01 / <span data-i18n="versions">Versions</span></span><h3 data-i18n="versionsTitle">Every world, its own space.</h3><p data-i18n="versionsCopy">From vanilla to modded. Keep your versions organized and your instances separate.</p></div><div class="version-stack" aria-hidden="true"><div><span class="mini-block"></span><span><b>Minecraft Java</b><small data-i18n="vanillaNote">Back to the essentials.</small></span><span class="row-pill" data-i18n="installed">Installed</span></div><div><span class="mini-block fabric"></span><span><b>Fabric</b><small data-i18n="fabricNote">Make it your own.</small></span><span class="row-pill" data-i18n="installed">Installed</span></div><div><span class="mini-block forge"></span><span><b>NeoForge</b><small data-i18n="forgeNote">A little more possibility.</small></span><span class="row-pill" data-i18n="installed">Installed</span></div></div></article>
+        <article class="feature-card mods-card"><div class="card-copy"><span class="feature-index">02 / <span data-i18n="modsShaders">Mods & shaders</span></span><h3 data-i18n="modsTitle">Familiar blocks. Fresh ideas.</h3><p data-i18n="modsCopy">Discover mods, explore dependencies, and find shaders for compatible instances.</p></div><div class="mod-art" aria-hidden="true"><span class="mod-tile">✳</span><span class="mod-tile">◈</span><span class="mod-tile">☀</span><div class="mod-label"><span data-i18n="madeForWorld">A world that feels like you.</span><span>↗</span></div></div></article>
+        <article class="feature-card multitask"><div class="card-copy"><span class="feature-index">03 / <span data-i18n="flow">In your flow</span></span><h3><span data-i18n="flowLine1">Keep playing.</span><br><span data-i18n="flowLine2">Keep exploring.</span></h3><p data-i18n="flowCopy">Manage downloads, mods, and shaders while your game keeps running.</p></div><div class="task-art"><div class="task-row"><span class="task-status"><span class="live-dot"></span><span data-i18n="gameRunning">Minecraft is running</span></span><span class="task-badge" data-i18n="inGame">In game</span></div><div class="task-download"><span data-i18n="nextWorld">Preparing your next world</span><span>68%</span><div class="task-progress"><i></i></div></div></div></article>
+        <article class="feature-card account"><div class="card-copy"><span class="feature-index">04 / <span data-i18n="yourSpace">Your space</span></span><h3 data-i18n="accountTitle">Your name. Your way.</h3><p data-i18n="accountCopy">Microsoft accounts or an offline nickname. Your folders, your Java, your preferences.</p></div><div class="account-art" aria-hidden="true"><div class="avatar-art">L</div><b>Hello, Player.</b><span data-i18n="accountNote">Adventure looks good on you.</span><div><span data-i18n="offline">Offline</span><span>Microsoft</span></div></div></article>
       </div>
     </section>
-
-    <section class="appearance-section" id="appearance"><div class="wrap appearance-layout"><div class="appearance-copy"><p class="kicker">MAKE IT YOURS.</p><h2>好看，<br>也合你心意。</h2><p>五种柔和配色，搭配各自的世界风景。<br>磨砂、通透、恰到好处。<br>选一个颜色，让每次打开都有好心情。</p><div class="theme-picker" role="group" aria-label="切换演示主题"><button data-theme="white" aria-label="白色" aria-pressed="false" style="--swatch:#e6e9e6"></button><button data-theme="green" aria-label="浅绿" aria-pressed="true" style="--swatch:#9bb69a"></button><button data-theme="pink" aria-label="粉色" aria-pressed="false" style="--swatch:#dfb5c5"></button><button data-theme="blue" aria-label="浅蓝" aria-pressed="false" style="--swatch:#a9ccdf"></button><button data-theme="yellow" aria-label="浅黄" aria-pressed="false" style="--swatch:#e3d39c"></button></div><p class="theme-name" id="theme-name" role="status">浅绿 · 像清晨一样清新</p></div><div class="theme-preview" data-theme="green"><div class="theme-glass"><img src="assets/mark.svg" alt="" width="38" height="42"><span>让热爱，自然发生。</span><small>LiteMC · 你的方块世界入口</small></div><span class="theme-preview-label">主题效果演示</span></div></div></section>
-
-    <section class="section wrap getting-started" id="start"><div class="section-heading"><p class="kicker">A LITTLE SETUP. A BIG WORLD.</p><h2>三步，走进你的世界。</h2><p>准备好合适的 Java，剩下的交给你的好奇心。</p></div><div class="steps"><article><span class="step-number">01</span><h3>准备启动器</h3><p>获取适合系统的版本，准备 Java 运行环境，并指定游戏下载目录。</p></article><article><span class="step-number">02</span><h3>选择你的玩法</h3><p>添加账号，安装原版或模组加载器。按需搭配模组、光影与皮肤。</p></article><article><span class="step-number">03</span><h3>点击启动，出发</h3><p>选择已安装版本，进入游戏。建造、探索，或者只是看一场方块日落。</p></article></div></section>
-
-    <section class="download-section wrap" id="download"><p class="kicker">YOUR NEXT ADVENTURE STARTS HERE.</p><h2>下一个世界，<br><span>现在开始。</span></h2><p>LiteMC v20.0 · 为 Minecraft Java 而来。</p><div class="download-options"><article><span class="os-icon" aria-hidden="true">⊞</span><h3>Windows</h3><p>Windows 10 / 11 · x64</p><a class="button primary release-link" data-platform="windows" href="#repository">查看发布状态 <span aria-hidden="true">↗</span></a><small>解压运行 · 需 Java 和 WebView2</small></article><article><span class="os-icon mac-icon" aria-hidden="true">⌘</span><h3>macOS</h3><p>macOS 15+ · Apple Silicon / Intel</p><a class="button secondary release-link" data-platform="macos" href="#repository">查看构建说明 <span aria-hidden="true">↗</span></a><small>Universal2 构建支持 · 以发布产物为准</small></article></div><div class="repository-note" id="repository"><span class="live-dot"></span><p id="repository-status">GitHub 仓库与下载链接准备中。发布后将在这里开放获取。</p></div></section>
-
-    <section class="faq wrap"><h2>出发前，你可能想知道。</h2><details><summary>需要准备什么运行环境？<span>+</span></summary><p>Windows 版本需要 Windows 10 / 11 x64、WebView2 Runtime，以及匹配游戏版本的 64 位 Java；无需安装 Python。macOS 构建以 macOS 15 及以上为目标，同时支持 Apple Silicon 和 Intel。游戏的 Java 版本与架构仍需匹配。</p></details><details><summary>可以使用微软账号和离线昵称吗？<span>+</span></summary><p>支持离线昵称及微软正版多账号。微软账号通过系统浏览器授权，启动游戏时验证 Minecraft Java 授权。离线昵称适合本地游玩，不提供游戏许可、Realms 或正版服务器认证。</p></details><details><summary>模组、光影和自定义皮肤有什么要求？<span>+</span></summary><p>模组需匹配游戏版本与加载器。光影仅对具备相应加载能力的实例提供，需要在游戏内启用。离线自定义皮肤依赖兼容的 CustomSkinLoader；本地皮肤不会上传到微软账号，也不保证其他玩家可见。</p></details><details><summary>游戏运行时，还能继续使用启动器吗？<span>+</span></summary><p>可以。v20 将游戏与下载任务分开管理，运行时仍可下载和管理模组、光影。新增模组在下次游戏启动后加载。取消下载不会关闭游戏；关闭启动器也会保留已启动的游戏。</p></details></section>
+    <section class="appearance-section" id="appearance"><div class="wrap appearance-layout"><div class="appearance-copy"><p class="kicker" data-i18n="appearanceKicker">A LITTLE MORE YOU.</p><h2><span data-i18n="appearanceLine1">Five shades.</span><br><span class="muted-heading" data-i18n="appearanceLine2">One good feeling.</span></h2><p data-i18n="appearanceCopy">Soft color. Frosted glass. A view worth opening.</p><div class="theme-picker" role="group" aria-label="Choose a theme" data-i18n-aria="themePicker"><button data-theme="white" aria-label="White" aria-pressed="false" style="--swatch:#e6e9e6"></button><button data-theme="green" aria-label="Sage" aria-pressed="true" style="--swatch:#9bb69a"></button><button data-theme="pink" aria-label="Blush" aria-pressed="false" style="--swatch:#dfb5c5"></button><button data-theme="blue" aria-label="Sky" aria-pressed="false" style="--swatch:#a9ccdf"></button><button data-theme="yellow" aria-label="Butter" aria-pressed="false" style="--swatch:#e3d39c"></button></div><p class="theme-name" id="theme-name" role="status">Sage. A breath of fresh air.</p></div><div class="theme-preview" data-theme="green"><div class="theme-glass"><img src="assets/mark.svg" alt="" width="38" height="42"><span data-i18n="glassTitle">A fresh perspective.</span><small data-i18n="glassNote">Your world, beautifully framed.</small></div></div></div></section>
+    <section class="coming-soon wrap" id="coming-soon"><div class="release-orb" aria-hidden="true"><img src="assets/mark.svg" width="45" height="50" alt=""></div><p class="kicker" data-i18n="soonKicker">GOOD THINGS TAKE A LITTLE TIME.</p><h2><span data-i18n="soonLine1">Your next adventure.</span><br><span class="muted-heading" data-i18n="soonLine2">Coming soon.</span></h2><p data-i18n="soonCopy">Something lighter is on the way.</p><div class="coming-pill"><span class="live-dot"></span><span data-i18n="inWorks">In the making</span></div></section>
   </main>
-  <footer class="site-footer wrap"><div><a href="#" class="brand"><img src="assets/mark.svg" width="22" height="25" alt="">LiteMC</a><span>轻一点，玩尽想象。</span><a class="repo-link" href="#repository">在 GitHub 上了解更多 ↗</a></div><p>独立第三方启动器，与 Mojang、Microsoft 或 Apple 无隶属关系。Minecraft 为其各自权利人的商标。</p><p>页面界面与进度为展示示意。功能依据 LiteMC v20 交付资料；macOS 构建、签名及实际兼容性以发布说明为准。</p></footer>
+  <footer class="site-footer wrap"><div><a href="#" class="brand"><img src="assets/mark.svg" width="22" height="25" alt="">LiteMC</a><span data-i18n="footerLine">A little lighter. A world of possibility.</span><a class="repo-link" hidden>GitHub ↗</a><a class="back-top" href="#" data-i18n="backTop">Back to top ↑</a></div><p data-i18n="legal">An independent launcher. Not affiliated with Mojang or Microsoft.</p></footer>
 </body>
 </html>
+
